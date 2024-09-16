@@ -19,3 +19,16 @@ Cypress.Commands.add('fillMandatoryFieldsAndSubmit', () => {
           .should('be.visible')
           .click()
 })
+
+Cypress.Commands.add('fillMandatoryFields', function(fieldsVals = {}) {
+      const {
+        firstName = 'Devisom',
+        lastName= 'Oliveira',
+        email = 'deivisom@exemplo.com',
+        openText = 'Teste - Cypress Básico - Escola TAT'
+      } = fieldsVals
+      cy.get('#firstName').type(firstName)
+      cy.get('#lastName').type(lastName)
+      cy.get('#email').type(email)
+      cy.get('#open-text-area').type(openText)
+    })
