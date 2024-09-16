@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 describe('Central de Atendimento ao Cliente TAT', () => {
-    const Three_Sec = 3000
+
     beforeEach(() => {
         cy.visit('./src/index.html')
     });
